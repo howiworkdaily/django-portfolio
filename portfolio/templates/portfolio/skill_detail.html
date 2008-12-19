@@ -1,18 +1,16 @@
 {% extends "portfolio/generic_list.html" %}
 
-{% block title %}{{ block.super }}: {{ category_list.0.name }} Projects {% endblock %}
+{% block title %}{{ block.super }}: {{ object.name }} Projects {% endblock %}
 
 {% block groups %}
-{% with category_list.0 as selected %}
 {% include "portfolio/categories_fragment.html" %}
-{% endwith %}
+{% with object as selected %}
 {% include "portfolio/skills_fragment.html" %}
+{% endwith %}
 {% endblock %}
 
 {% block projects %}
-{% with category_list.0 as category %}
-{% with category.project_set.all as projects %}
+{% with object.project_set.all as projects %}
 {% include "portfolio/projects_fragment.html" %}
-{% endwith %}
 {% endwith %}
 {% endblock %}

@@ -1,5 +1,5 @@
 <ol id="projects">
-  {% for project in category.project_set.all %}
+  {% for project in projects.all %}
   <li><a href="{% url project_detail project.slug %}">{{ project }}</a></li>
   {% endfor %}
 </ol>
