@@ -1,0 +1,16 @@
+
+Installation
+============
+
+
+1. Add portfolio to your Python path.
+
+    ln -s `pwd`/portfolio/ /Library/Python/2.5/site-packages/portfolio
+
+2. Sync the models in the example project.
+
+    python manage.py syncdb
+
+3. Run the development server.
+
+    python manage.py runserver
