@@ -1,5 +1,6 @@
 *.pyc
 *~
 example_project/*.sqlite
+example_project/media/*
 *.bak
 
