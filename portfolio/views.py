@@ -3,7 +3,6 @@ from models import Project, Skill, Category
 
 def project_context():
     return {
-        'project_list': Project.objects.all(),
         'category_list': Category.objects.all(),
         'skill_list': Skill.objects.all(),
         }
@@ -17,16 +16,6 @@ def project_detail(request, slug, template_name='portfolio/project_detail.html',
         extra_context = extra,
         slug = slug,
         slug_field = 'slug',
-        queryset = Project.objects.all(),
-        )
-
-def project_list(request, template_name='portfolio/project_list.html', extra_context={}):
-    extra = project_context()
-    extra.update(extra_context)
-    return object_list(
-        request,
-        template_name = template_name,
-        extra_context = extra,
         queryset = Project.objects.all(),
         )
 
