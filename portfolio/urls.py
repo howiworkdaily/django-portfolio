@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from views import project_detail, category_detail, category_list, skill_detail, skill_list
+from views import project_detail, category_detail, category_list, skill_detail
 
 admin.autodiscover()
 
@@ -29,12 +29,5 @@ urlpatterns = patterns(
         regex = r'^skill/(?P<slug>[-\w]+)/$',
         view = skill_detail,
         name = 'skill_detail',
-        ),
-
-    url(
-        regex = r'^skills/$',
-        view = skill_list,
-        name = 'skill_list',
-        ),
-       
+        ),       
 )

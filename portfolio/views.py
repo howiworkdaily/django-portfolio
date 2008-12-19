@@ -52,14 +52,3 @@ def skill_detail(request, slug, template_name='portfolio/skill_detail.html', ext
         slug_field = 'slug',
         queryset = Skill.objects.all(),
         )
-
-
-def skill_list(request, template_name='portfolio/skill_list.html', extra_context={}):
-    extra = project_context()
-    extra.update(extra_context)
-    return object_list(
-        request,
-        template_name = template_name,
-        extra_context = extra,
-        queryset = Skill.objects.all(),
-        )
