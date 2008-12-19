@@ -72,8 +72,14 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'portfolio',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
 )
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
