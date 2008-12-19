@@ -1,0 +1,29 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}{{ block.super }}: Projects {% endblock %}
+
+{% block content %}
+
+<div id="sidebar">
+  <ol id="categories">
+    {% for category in category_list %}
+    <li><a href="{% url category_detail category.slug %}">{{ category }}</a></li>
+    {% endfor %}
+  </ol>
+  <ol id="skills">
+    {% for skill in skill_list %}
+    <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
+    {% endfor %}
+  </ol>
+</div>
+
+<div id="main">
+  {% with category_list.0 as category %}
+  <ol id="projects">
+  {% for project in category.project_set.all %}
+    <li><a href="{% url project_detail project.slug %}">{{ project }}</a></li>
+  {% endfor %}
+  </ol>
+  {% endwith %}
+</div>
+{% endblock %}
