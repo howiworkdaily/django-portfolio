@@ -1,0 +1,39 @@
+<div id="project">
+  <h2 class="name">{{ project.name }}</h2>
+
+  {% if project.url %}
+  <h3 class="url"><a href="{% url project_detail project.slug %}">{{ project.url }}</a></h3>
+  {% endif %}
+
+  {% if project.pull_quote %}
+  <p class="pull-quote">
+  {{ project.pull_quote }}
+  </p>
+  {% endif %}
+  
+  <ul class="skills">
+    <li class="title">Skills</li>
+    {% for skill in project.skills.all %}
+    <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {% if project.start_date and project.end_date %}
+  <div id="dates">{{ project.start_date|date:"D d M Y" }} - {{ project.end_date|date:"D d M Y" }}</div>
+  {% else %}
+  {% if project.start_date %}
+  <div id="dates">{{ project.start_date|date:"D d M Y" }}</div>
+  {% else %}
+  {% if project.end_date %}
+  <div id="dates">{{ project.end_date|date:"D d M Y" }}</div>
+  {% endif %}
+  {% endif %}
+  {% endif %}
+
+  <div id="description">
+  {{ project.description }}
+  </div>
+
+</div>
+
+
