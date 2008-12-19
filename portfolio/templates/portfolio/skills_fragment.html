@@ -1,0 +1,5 @@
+<ol id="skills">
+  {% for skill in skill_list %}
+  <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
+  {% endfor %}
+</ol>

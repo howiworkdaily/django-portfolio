@@ -2,9 +2,27 @@
 <head>
 <title>{% block title %}Django Portfolio{% endblock %}</title>
 </head>
+<style>
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#groups {
+   float: left;
+   width: 30%;
+}
+#projects {
+  float: left;
+  width: 65%;
+}
+
+li.selected {
+  font-weight: bold;
+}
+</style>
 <body>
-{% block content %}
-{% endblock %}
+{% block content %}{% endblock %}
 </body>
 </html>
