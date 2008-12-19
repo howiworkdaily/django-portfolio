@@ -1,11 +1,17 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from views import project_detail, category_detail, category_list, skill_detail, skill_list
+from views import project_detail, project_list, category_detail, category_list, skill_detail, skill_list
 
 admin.autodiscover()
 
 urlpatterns = patterns(
     '',
+
+    url(
+        regex = r'^$',
+        view = project_list,
+        name = 'project_list',
+        ),
 
     url(
         regex = r'^project/(?P<slug>[-\w]+)/$',

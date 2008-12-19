@@ -11,6 +11,14 @@ def project_detail(request, slug, template_name='portfolio/project_detail.html',
         queryset = Project.objects.all(),
         )
 
+def project_list(request, template_name='portfolio/project_list.html', extra_context={}):
+    return object_list(
+        request,
+        template_name = template_name,
+        extra_context = extra_context,
+        queryset = Project.objects.all(),
+        )
+
 def category_detail(request, slug, template_name='portfolio/category_detail.html', extra_context={}):
     return object_detail(
         request,
@@ -26,7 +34,7 @@ def category_list(request, template_name='portfolio/category_list.html', extra_c
         request,
         template_name = template_name,
         extra_context = extra_context,
-        queryset = Category.objects.active(),
+        queryset = Category.objects.all(),
         )
 
 def skill_detail(request, slug, template_name='portfolio/skill_detail.html', extra_context={}):
@@ -45,5 +53,5 @@ def skill_list(request, template_name='portfolio/skill_list.html', extra_context
         request,
         template_name = template_name,
         extra_context = extra_context,
-        queryset = Skill.objects.active(),
+        queryset = Skill.objects.all(),
         )
