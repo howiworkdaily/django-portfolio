@@ -1,0 +1,27 @@
+
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#groups {
+   float: left;
+   width: 30%;
+}
+#projects {
+  float: left;
+  width: 65%;
+}
+
+li.selected {
+  font-weight: bold;
+}
+
+.pull-quote {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid black;
+  font-style: italic;
+}
