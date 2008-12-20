@@ -31,8 +31,18 @@
   {% endif %}
 
   <div id="description">
-  {{ project.description }}
+  {{ project.description|safe }}
   </div>
+
+  {% with project.projectfile_set.all as files %}
+  {% if files %}
+  <ol id="files">
+    {% for file in files %}
+    <li><a href="{{ file.file.url }}">{{ file.file.name }}</a>:</li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  {% endwith %}
 
 </div>
 
