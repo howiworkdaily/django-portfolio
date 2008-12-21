@@ -12,23 +12,12 @@
   {% endif %}
   
   <ul class="skills">
-    <li class="title">Skills</li>
     {% for skill in project.skills.all %}
     <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
     {% endfor %}
   </ul>
 
-  {% if project.start_date and project.end_date %}
-  <div id="dates">{{ project.start_date|date:"D d M Y" }} - {{ project.end_date|date:"D d M Y" }}</div>
-  {% else %}
-  {% if project.start_date %}
-  <div id="dates">{{ project.start_date|date:"D d M Y" }}</div>
-  {% else %}
-  {% if project.end_date %}
-  <div id="dates">{{ project.end_date|date:"D d M Y" }}</div>
-  {% endif %}
-  {% endif %}
-  {% endif %}
+  {% include "portfolio/dates_fragment.html" %}
 
   <div id="description">
   {{ project.description|safe }}

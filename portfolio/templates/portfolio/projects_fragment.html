@@ -1,6 +1,22 @@
-<ol id="projects">
+<ul id="projects">
   {% for project in projects.all %}
-  <li><a href="{% url project_detail project.slug %}">{{ project }}</a></li>
+  <li class="project">
+  <div class="details">
+    {% include "portfolio/dates_fragment.html" %}
+    <ul class="skills">
+      {% for skill in project.skills.all %}
+      <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <h2><a href="{% url project_detail project.slug %}">{{ project }}</a></h2>
+  
+
+
+  {{ project.description|safe }}
+
+  </li>
   {% endfor %}
-</ol>
+</ul>
 

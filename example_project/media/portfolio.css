@@ -7,11 +7,11 @@ body {
 
 #groups {
    float: left;
-   width: 30%;
+   width: 150px;
+    margin-right: 25px;
 }
 #projects {
-  float: left;
-  width: 65%;
+
 }
 
 li.selected {
@@ -25,3 +25,45 @@ li.selected {
   border: 1px solid black;
   font-style: italic;
 }
+
+#skills, #categories, ul.skills {
+    list-style: none;
+}
+
+#skills, #categories {
+    border: 1px solid #777;
+    padding: 1em;
+    text-align: center;
+    
+}
+
+ul.skills {
+    overflow: auto;
+    display: block;
+    padding: 0;
+}
+
+ul.skills li {
+    margin-right: 1em;
+    float: left;
+}
+
+li.title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#projects {
+    list-style: none;
+}
+
+.dates {
+    font-size: 1.2em;
+}
+
+.project .details {
+    width: 200px;
+    float: right;
+    padding: 10px;
+}
+
