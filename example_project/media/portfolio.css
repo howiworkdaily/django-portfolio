@@ -6,9 +6,10 @@ body {
 }
 
 #groups {
-   float: left;
-   width: 150px;
+    float: left;
+    width: 150px;
     margin-right: 25px;
+    height: 100%;
 }
 #projects {
 
@@ -58,12 +59,16 @@ li.title {
 }
 
 .dates {
-    font-size: 1.2em;
+
 }
 
 .project .details {
+    border: 1px solid #777;
     width: 200px;
     float: right;
-    padding: 10px;
+    padding: 1em;
+    padding-top: 0.25em;
+    margin: 1em;
+
 }
 

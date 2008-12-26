@@ -1,3 +1,4 @@
+{% load portfolio %}
 <div id="project">
   <h2 class="name">{{ project.name }}</h2>
 
@@ -27,7 +28,17 @@
   {% if files %}
   <ol id="files">
     {% for file in files %}
-    <li><a href="{{ file.file.url }}">{{ file.file.name }}</a>:</li>
+    <li><a href="{{ file.file.url }}">{{ file.file.name|split:"/"|last }}</a></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  {% endwith %}
+
+  {% with project.projectimage_set.all as images %}
+  {% if images %}
+  <ol id="images">
+    {% for image in images %}
+    <li><img src="{{ image.image.url }}" alt="{{ image.image.name|split:"/"|last }}" title="{{ image.image.name|split:"/"|last }}"></li>
     {% endfor %}
   </ol>
   {% endif %}

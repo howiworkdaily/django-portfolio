@@ -1,3 +1,4 @@
+{% load portfolio %}
 <ul id="projects">
   {% for project in projects.all %}
   <li class="project">
@@ -15,6 +16,17 @@
 
 
   {{ project.description|safe }}
+
+
+  {% with project.projectimage_set.all as images %}
+  {% if images %}
+  {% with images.0 as image %}
+  
+  <img src="{{ image.image.url }}" alt="{{ image.image.name|split:"/"|last }}" title="{{ image.image.name|split:"/"|last }}">
+
+  {% endwith %}
+  {% endif %}
+  {% endwith %}
 
   </li>
   {% endfor %}
