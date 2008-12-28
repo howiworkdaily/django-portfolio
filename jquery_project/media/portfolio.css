@@ -1,0 +1,79 @@
+
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#groups {
+    float: left;
+    width: 150px;
+    margin-right: 25px;
+    height: 100%;
+}
+#projects {
+
+}
+
+li.selected {
+  font-weight: bold;
+}
+
+.pull-quote {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid black;
+  font-style: italic;
+}
+
+#images, #skills, #categories, ul.skills {
+    list-style: none;
+}
+
+#skills, #categories {
+    border: 1px solid #777;
+    padding: 1em;
+    text-align: center;
+    
+}
+
+#files {
+    list-style-position: inside;
+}
+
+ul.skills {
+    overflow: auto;
+    display: block;
+    padding: 0;
+}
+
+
+ul.skills li {
+    margin-right: 1em;
+    float: left;
+}
+
+li.title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#projects {
+    list-style: none;
+}
+
+.dates {
+
+}
+
+.project .details {
+    border: 1px solid #777;
+    width: 200px;
+    float: right;
+    padding: 1em;
+    padding-top: 0.25em;
+    margin: 1em;
+
+}
+
