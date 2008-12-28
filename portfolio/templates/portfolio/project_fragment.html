@@ -36,11 +36,11 @@
 
   {% with project.projectimage_set.all as images %}
   {% if images %}
-  <ol id="images">
+  <ul id="images">
     {% for image in images %}
     <li><img src="{{ image.image.url }}" alt="{{ image.image.name|split:"/"|last }}" title="{{ image.image.name|split:"/"|last }}"></li>
     {% endfor %}
-  </ol>
+  </ul>
   {% endif %}
   {% endwith %}
 
