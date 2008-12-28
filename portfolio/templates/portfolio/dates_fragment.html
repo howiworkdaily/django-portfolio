@@ -1,11 +1,11 @@
 {% if project.start_date and project.end_date %}
-<p class="dates">{{ project.start_date|date:"d/m/y" }} to {{ project.end_date|date:"d/m/y" }}</p>
+<p class="dates">{{ project.start_date|date:"m/d/y" }} to {{ project.end_date|date:"m/d/y" }}</p>
 {% else %}
 {% if project.start_date %}
-<p class="dates">{{ project.start_date|date:"d/m/y" }}</p>
+<p class="dates">{{ project.start_date|date:"m/d/y" }}</p>
 {% else %}
 {% if project.end_date %}
-<p class="dates">{{ project.end_date|date:"d/m/y" }}</p>
+<p class="dates">{{ project.end_date|date:"m/d/y" }}</p>
 {% endif %}
 {% endif %}
 {% endif %}
