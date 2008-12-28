@@ -77,3 +77,12 @@ li.title {
 
 }
 
+.image-description {
+    font-style: italic;
+}
+
+#counter {
+    float: right;
+    margin-right: 1em;
+    font-style: italic;
+}

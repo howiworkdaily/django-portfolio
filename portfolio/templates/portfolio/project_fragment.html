@@ -38,7 +38,10 @@
   {% if images %}
   <ul id="images">
     {% for image in images %}
-    <li><img src="{{ image.image.url }}" alt="{{ image.image.name|split:"/"|last }}" title="{{ image.image.name|split:"/"|last }}"></li>
+    <li>
+    <p class="image-description">{{ image.desc }}</p>
+    <img src="{{ image.image.url }}" alt="{{ image.image.name|split:"/"|last }}" title="{{ image.image.name|split:"/"|last }}">
+    </li>
     {% endfor %}
   </ul>
   {% endif %}
