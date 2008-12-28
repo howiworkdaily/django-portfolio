@@ -64,7 +64,14 @@ li.title {
 }
 
 .dates {
+    float: right;
+    font-size: 1.5em;
+}
 
+.url {
+    float: right;
+    font-style: italic;
+    font-size: 1.1em;
 }
 
 .project .details {
