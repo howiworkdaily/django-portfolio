@@ -3,5 +3,10 @@
 example_project/*.sqlite
 example_project/media/project_file/*
 example_project/media/project_image/*
+jquery_project/*.sqlite
+jquery_project/media/project_file/*
+jquery_project/media/project_image/*
+
+
 *.bak
 
