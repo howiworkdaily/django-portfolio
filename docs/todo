@@ -12,3 +12,4 @@
 ============
 
 * Integration with Git repositories.
+* Django command to resize all ProjectImages to specified height / width.

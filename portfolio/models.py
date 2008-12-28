@@ -6,6 +6,7 @@ class Project(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     url = models.URLField(blank=True, null=True)
     pull_quote = models.TextField()
+    short_description = models.TextField()
     description = models.TextField()
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)

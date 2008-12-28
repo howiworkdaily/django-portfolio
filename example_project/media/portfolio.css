@@ -27,7 +27,7 @@ li.selected {
   font-style: italic;
 }
 
-#skills, #categories, ul.skills {
+#images, #skills, #categories, ul.skills {
     list-style: none;
 }
 
@@ -38,11 +38,16 @@ li.selected {
     
 }
 
+#files {
+    list-style-position: inside;
+}
+
 ul.skills {
     overflow: auto;
     display: block;
     padding: 0;
 }
+
 
 ul.skills li {
     margin-right: 1em;
