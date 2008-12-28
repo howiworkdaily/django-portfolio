@@ -1,10 +1,18 @@
 {% load portfolio %}
 <div id="project">
+  {% include "portfolio/dates_fragment.html" %}
   <h2 class="name">{{ project.name }}</h2>
 
   {% if project.url %}
   <h3 class="url"><a href="{% url project_detail project.slug %}">{{ project.url }}</a></h3>
   {% endif %}
+  <ul class="skills">
+    {% for skill in project.skills.all %}
+    <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
+    {% endfor %}
+  </ul>
+
+
 
   {% if project.pull_quote %}
   <p class="pull-quote">
@@ -12,13 +20,7 @@
   </p>
   {% endif %}
   
-  <ul class="skills">
-    {% for skill in project.skills.all %}
-    <li><a href="{% url skill_detail skill.slug %}">{{ skill }}</a></li>
-    {% endfor %}
-  </ul>
 
-  {% include "portfolio/dates_fragment.html" %}
 
   <div id="description">
   {{ project.description|safe }}
