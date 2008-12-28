@@ -36,6 +36,9 @@ class Category(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     position = models.PositiveIntegerField()
 
+    class Meta:
+        ordering = ["position"]
+
     def __unicode__(self):
         return self.name
 
