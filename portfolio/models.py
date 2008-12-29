@@ -13,6 +13,9 @@ class Project(models.Model):
     category = models.ForeignKey('Category')
     skills = models.ManyToManyField('Skill')
 
+    class Meta:
+        ordering = ['-start_date', '-end_date', ]
+
     def __unicode__(self):
         return self.name
 
